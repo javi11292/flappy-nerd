@@ -10,25 +10,18 @@ function useHook(props) {
     const { score, addScore, resetScore } = context.useScore()
 
     function loadGame() {
-        const sWidth = window.innerWidth
-        const sHeight = window.innerHeight
-        const ratio = sWidth / sHeight
-        const wRatio = 16 / 9
-
-        const width = ratio < wRatio ? sWidth : (wRatio * sHeight)
-        const height = width / wRatio
-
         const config = {
             parent: parent.current,
             type: Phaser.AUTO,
-            width,
-            height,
-            resolution: 5,
-            canvasStyle: "display: block",
+            width: 1920,
+            height: 1080,
+            scale: {
+                mode: Phaser.Scale.FIT,
+            },
             physics: {
                 default: "arcade",
                 arcade: {
-                    gravity: { y: height * 3 }
+                    gravity: { y: 1080 * 3 }
                 }
             },
         }
