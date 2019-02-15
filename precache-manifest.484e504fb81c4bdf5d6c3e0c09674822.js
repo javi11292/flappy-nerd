@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/flappy-nerd/static/js/runtime~main.6570378e.js"
   },
   {
-    "revision": "705cbe869eefd513a13cee2adcfdc60e",
+    "revision": "6a907a31d89728b4e9d3792c7bdf3134",
     "url": "/flappy-nerd/index.html"
   }
 ];
