@@ -5,6 +5,7 @@ import { context } from "components/Store"
 
 function useHook(props) {
     useEffect(loadGame, [])
+    const gameRef = useRef()
     const parent = useRef()
     const { score, addScore, resetScore } = context.useScore()
 
@@ -22,7 +23,7 @@ function useHook(props) {
             type: Phaser.AUTO,
             width,
             height,
-            canvasStyle: "display: block",
+            canvasStyle: "display: block; pointer-events: none",
             physics: {
                 default: "arcade",
                 arcade: {
@@ -33,9 +34,14 @@ function useHook(props) {
 
         const game = new Phaser.Game(config)
         game.scene.add("Game", new GameScene({ addScore, resetScore }), true)
+        gameRef.current = game
     }
 
-    return { parent, score }
+    function onClick() {
+        gameRef.current.scene.getScene("Game").input.emit("pointerdown")
+    }
+
+    return { parent, score, onClick }
 }
 
 export default useHook
