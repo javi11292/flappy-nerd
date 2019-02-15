@@ -18,5 +18,6 @@ export default theme => ({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        pointerEvents: "none",
     },
 })
