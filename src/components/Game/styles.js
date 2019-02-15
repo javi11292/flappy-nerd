@@ -19,5 +19,6 @@ export default theme => ({
         alignItems: "center",
         justifyContent: "center",
         pointerEvents: "none",
+        userSelect: "none",
     },
 })
