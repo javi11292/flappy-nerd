@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "f1574807be50b3744ad2",
-    "url": "/flappy-nerd/static/js/main.f1574807.chunk.js"
+    "revision": "0bd2d7ed4f4db0703b07",
+    "url": "/flappy-nerd/static/js/main.0bd2d7ed.chunk.js"
   },
   {
     "revision": "40fec9416b796c77d075",
@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/flappy-nerd/static/js/runtime~main.6570378e.js"
   },
   {
-    "revision": "f0ce835a8cefab5a4ec6a08b08561a64",
+    "revision": "96ff7ebfaf5a6002865f3b3a84249d73",
     "url": "/flappy-nerd/index.html"
   }
 ];
