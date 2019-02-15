@@ -7,7 +7,7 @@ const Game = React.memo(props => {
     const { parent, score, onClick } = useHook(props)
     return (
         <div
-            onClick={onClick}
+            onPointerDown={onClick}
             className={props.classes.canvas}
             ref={parent}>
             <Paper className={props.classes.score}>Score: {score}</Paper>
