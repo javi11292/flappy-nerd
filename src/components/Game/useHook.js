@@ -23,7 +23,8 @@ function useHook(props) {
             type: Phaser.AUTO,
             width,
             height,
-            canvasStyle: "display: block; pointer-events: none",
+            resolution: 5,
+            canvasStyle: "display: block",
             physics: {
                 default: "arcade",
                 arcade: {
@@ -37,7 +38,8 @@ function useHook(props) {
         gameRef.current = game
     }
 
-    function onClick() {
+    function onClick({ target }) {
+        if (target !== parent.current) return
         gameRef.current.scene.getScene("Game").input.emit("pointerdown")
     }
 
