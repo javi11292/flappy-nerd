@@ -18,10 +18,10 @@ class Game extends Phaser.Scene {
         const width = this.game.config.width
         this.make.graphics().fillStyle(0x0000AA)
             .fillCircle(PLAYER_RADIUS * width, PLAYER_RADIUS * width, PLAYER_RADIUS * width)
-            .generateTexture("player", PLAYER_RADIUS * 2 * width, PLAYER_RADIUS * 2 * width)
+            .generateTexture("player", PLAYER_RADIUS * 2 * width + 1, PLAYER_RADIUS * 2 * width + 1)
 
         this.make.graphics().fillStyle(0x00AA00).fillRect(0, 0, PIPE_WIDTH * width, PIPE_HEIGHT * width)
-            .generateTexture("pipe", PIPE_WIDTH * width, PIPE_HEIGHT * width)
+            .generateTexture("pipe", PIPE_WIDTH * width + 1, PIPE_HEIGHT * width + 1)
 
         this.add.graphics().fillStyle(0xCCCCCC).fillRect(0, 0, width, this.game.config.height)
     }
