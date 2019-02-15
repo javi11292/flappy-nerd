@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/flappy-nerd/precache-manifest.9c6a6ec57e0f7e5c3d50cc413b06f8d4.js"
+  "/flappy-nerd/precache-manifest.7123e248d3396c1a37c80ea036c65161.js"
 );
 
 workbox.clientsClaim();
